@@ -17,7 +17,7 @@ data_canada = px.data.gapminder().query("country == 'Canada'")
 fig2 = px.bar(data_canada, x='year', y='pop', color = 'pop')
 
 # Create two columns
-col1, col2 = st.columns(2)  # 두 개의 같은 크기의 열을 생성
+col1, col2 = st.columns(1, 2)  # col1은 col2의 절반 너비 열 생성
 
 # First column with pie chart
 with col1:
