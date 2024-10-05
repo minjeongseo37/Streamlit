@@ -10,22 +10,22 @@ st.title('Visualization_241005')
 import plotly.graph_objects as go
 labels = ['A','B','C','D']
 values = [300,200,100,500]
-fig = go.Figure(data = [go.Pie(labels = labels, values = values, hole =.3)])
-chart1 = st.plotly_chart(fig)
+fig1 = go.Figure(data = [go.Pie(labels = labels, values = values, hole =.3)])
 
 import plotly.express as px
 data_canada = px.data.gapminder().query("country == 'Canada'")
-fig = px.bar(data_canada, x='year', y='pop', color = 'pop')
-chart2 = st.plotly_chart(fig)
+fig2 = px.bar(data_canada, x='year', y='pop', color = 'pop')
 
+# Create two columns
+col1, col2 = st.columns(2)  # 두 개의 같은 크기의 열을 생성
 
-col1, col2 = st.columns(['chart1', 'chart2'])
-
+# First column with pie chart
 with col1:
-    st.plotly_chart(width=200)
-   
+    st.plotly_chart(fig1, use_container_width=True)  # 파이 차트 출력
+
+# Second column with bar chart and image
 with col2:
-    st.image('dog.jpg', width=200)
+    st.plotly_chart(fig2, use_container_width=True)  # 바 차트 출력
 
 
 
