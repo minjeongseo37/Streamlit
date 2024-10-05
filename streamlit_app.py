@@ -12,8 +12,8 @@ st.write("")
 
 st.markdown(
     """
-    <div style="padding-left: 50px; padding-right: 50px;">
-        This text has 50px of padding on both sides.
+    <div style="margin-left: 50px; margin-right: 50px;">
+        <h3>1. Streamlit for diverse forms of graph visualizations</h3>
     </div>
     """,
     unsafe_allow_html=True
