@@ -5,7 +5,10 @@ import matplotlib.pyplot as plt # 시각화 라이브러리
 import plotly.express as px
 
 
-st.title('[ Visualization_241005 ]')
+st.title('■ Visualization_241005 ■')
+
+st.write("")
+st.write("")
 
 st.subheader('1. Streamlit for diverse forms of graph visualizations')
 
@@ -44,11 +47,9 @@ st.write("")
 st.write("")
 
 
-
-
-
 st.subheader('2. Streamlit for sin and cos function visualization')
-
+st.write("")
+st.write("")
 x_start = st.slider('x 시작값' ,  0.0, 10.0, 0.0)
 x_end = st.slider('x 시작값' ,  10.0, 20.0, 10.0)
 
