@@ -37,7 +37,15 @@ result = expensive_computataion(x)
 
 
 
+
+import plotly.express as px
 data_canada = px.data.gapminder().query("country == 'Canada'")
 data_canada
 fig = px.bar(data_canada, x='year', y='pop')
-fig.show()
+st.plotly_chart(fig)
+
+labels = ['A','B','C','D']
+values = [300,200,100,500]
+fig = go.Figure(data = [go.Pie(labels = labels, values = values, hole =.3)])
+st.plotly_chart(fig)
+
