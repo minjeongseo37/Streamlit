@@ -64,12 +64,29 @@ st.markdown(
 
 st.write("")
 
+# Wrap sliders in a div for margin
+st.markdown(
+    """
+    <div style="margin-left: 50px; margin-right: 50px;">
+    """,
+    unsafe_allow_html=True
+)
+
 # Sliders for sin and cos function visualization
 x_start = st.slider('x 시작값', 0.0, 10.0, 0.0)
 x_end = st.slider('x 끝값', 10.0, 20.0, 10.0)
 
+st.markdown(
+    """
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Generate x values
 x = np.linspace(x_start, x_end)
 
+# Calculate y values
 y_sin = np.sin(x)
 y_cos = np.cos(x)
 
@@ -82,7 +99,24 @@ ax.set_xlabel('X-axis')
 ax.set_ylabel('Y-axis')
 ax.set_title('sin and cos function')
 plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)  # Adjust margins
+
+# Wrap plot in a div for margin
+st.markdown(
+    """
+    <div style="margin-left: 50px; margin-right: 50px;">
+    """,
+    unsafe_allow_html=True
+)
+
+# Display the plot
 st.pyplot(fig)
+
+st.markdown(
+    """
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # Expensive computation with caching
 @st.cache
