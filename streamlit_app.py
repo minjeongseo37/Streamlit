@@ -4,6 +4,23 @@ import numpy as np
 import matplotlib.pyplot as plt # 시각화 라이브러리
 import plotly.express as px
 
+def main_page():
+    st.title('Main Page🎈')
+    st.sidebar.title('Side Main🎈')
+    
+def page2():
+    st.title('Page 2📒')
+    st.sidebar.title('Side 2📒')
+    
+def page3():
+    st.title('Page 3🎉')
+    st.sidebar.title('Side 3🎉')
+
+page_names = {'Main Page': main_page, 'Page 2':page2, 'Page 3':page3}
+    
+selected_page = st.sidebar.selectbox('Select a page', page_names.keys())
+page_names[selected_page]()
+
 
 st.title('1. Visualization_241005')
 
