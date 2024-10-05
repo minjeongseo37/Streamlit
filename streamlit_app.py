@@ -7,18 +7,25 @@ import plotly.express as px
 
 st.title('Visualization_241005')
 
-
 import plotly.graph_objects as go
 labels = ['A','B','C','D']
 values = [300,200,100,500]
 fig = go.Figure(data = [go.Pie(labels = labels, values = values, hole =.3)])
-st.plotly_chart(fig)
+chart1 = st.plotly_chart(fig)
 
 import plotly.express as px
 data_canada = px.data.gapminder().query("country == 'Canada'")
 fig = px.bar(data_canada, x='year', y='pop', color = 'pop')
-st.plotly_chart(fig)
+chart2 = st.plotly_chart(fig)
 
+
+# col1, col2 = st.columns(['chart1', 'chart2'])
+
+# with col1:
+#     st.image('cat.jpg', width=200)
+   
+# with col2:
+#     st.image('dog.jpg', width=200)
 
 
 
