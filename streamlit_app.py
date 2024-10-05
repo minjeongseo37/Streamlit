@@ -64,24 +64,11 @@ st.markdown(
 
 st.write("")
 
-# Wrap sliders in a div for margin
-st.markdown(
-    """
-    <div style="margin: 20px 50px;">  <!-- 여백 추가 -->
-    """,
-    unsafe_allow_html=True
-)
-
-# Sliders for sin and cos function visualization
-x_start = st.slider('x 시작값', 0.0, 10.0, 0.0)
-x_end = st.slider('x 끝값', 10.0, 20.0, 10.0)
-
-st.markdown(
-    """
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# Create a container for sliders with margin
+with st.container():
+    st.markdown("<div style='margin: 20px 50px;'></div>", unsafe_allow_html=True)  # 여백 추가
+    x_start = st.slider('x 시작값', 0.0, 10.0, 0.0)
+    x_end = st.slider('x 끝값', 10.0, 20.0, 10.0)
 
 # Generate x values
 x = np.linspace(x_start, x_end)
@@ -100,23 +87,10 @@ ax.set_ylabel('Y-axis')
 ax.set_title('sin and cos function')
 plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)  # Adjust margins
 
-# Wrap plot in a div for margin
-st.markdown(
-    """
-    <div style="margin: 20px 50px;">  <!-- 여백 추가 -->
-    """,
-    unsafe_allow_html=True
-)
-
-# Display the plot
-st.pyplot(fig)
-
-st.markdown(
-    """
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# Create a container for the plot with margin
+with st.container():
+    st.markdown("<div style='margin: 20px 50px;'></div>", unsafe_allow_html=True)  # 여백 추가
+    st.pyplot(fig)
 
 # Expensive computation with caching
 @st.cache
