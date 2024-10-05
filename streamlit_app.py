@@ -12,14 +12,14 @@ st.write("")
 
 st.markdown(
     """
-    <div style="margin-left: 50px; margin-right: 50px;">
+    <div style="margin-left: 50px; margin-right: 0px;">
         <h3>1. Streamlit for diverse forms of graph visualizations</h3>
     </div>
     """,
     unsafe_allow_html=True
 )
 
-st.subheader('1. Streamlit for diverse forms of graph visualizations')
+# st.subheader('1. Streamlit for diverse forms of graph visualizations')
 
 import plotly.graph_objects as go
 labels = ['A','B','C','D']
@@ -40,6 +40,9 @@ with col1:
 # Second column with bar chart and image
 with col2:
     st.plotly_chart(fig1, use_container_width=True)  # 파이 차트 출력
+
+st.markdown("</div>", unsafe_allow_html=True)  # div 닫기
+
 
 
 df = px.data.gapminder()
