@@ -21,11 +21,11 @@ col1, col2 = st.columns([1, 3])  # col1은 col2의 절반 너비 열 생성
 
 # First column with pie chart
 with col1:
-    st.plotly_chart(fig1, use_container_width=True)  # 파이 차트 출력
+    st.plotly_chart(fig2, use_container_width=True)  # 바 차트 출력  
 
 # Second column with bar chart and image
 with col2:
-    st.plotly_chart(fig2, use_container_width=True)  # 바 차트 출력
+    st.plotly_chart(fig1, use_container_width=True)  # 파이 차트 출력
 
 
 
