@@ -38,5 +38,6 @@ result = expensive_computataion(x)
 
 
 data_canada = px.data.gapminder().query("country == 'Canada'")
+data_canada
 fig = px.bar(data_canada, x='year', y='pop')
 fig.show()
