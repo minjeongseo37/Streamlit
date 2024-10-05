@@ -16,7 +16,7 @@ import plotly.express as px
 data_canada = px.data.gapminder().query("country == 'Canada'")
 fig2 = px.bar(data_canada, x='year', y='pop', color = 'pop')
 
-# Create two columns with 1:2 ratio
+# Create two columns with 3:1 ratio
 col1, col2 = st.columns([3, 1])  # col1은 col2의 절반 너비 열 생성
 
 # First column with pie chart
@@ -28,8 +28,8 @@ with col2:
     st.plotly_chart(fig1, use_container_width=True)  # 파이 차트 출력
 
 
-
-
+df = px.data.gapminder()
+fig3 = px.scatter(df.query("year == 2007"), x = 'gdpPercap' , y = 'lifeExp', size = 'pop', color = 'continent')
 
 
 st.title('Streamlit for sin and cos function visualization')
