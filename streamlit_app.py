@@ -44,8 +44,10 @@ data_canada
 fig = px.bar(data_canada, x='year', y='pop')
 st.plotly_chart(fig)
 
+import plotly.graph_objects as go
 labels = ['A','B','C','D']
 values = [300,200,100,500]
 fig = go.Figure(data = [go.Pie(labels = labels, values = values, hole =.3)])
 st.plotly_pie(fig)
+
 
