@@ -66,7 +66,7 @@ st.write("")
 
 # Create a container for sliders with margin
 with st.container():
-    st.markdown("<div style='margin: 20px 50px;'></div>", unsafe_allow_html=True)  # 여백 추가
+    st.markdown("<div style='margin: 120px 50px;'></div>", unsafe_allow_html=True)  # 여백 추가
     x_start = st.slider('x 시작값', 0.0, 10.0, 0.0)
     x_end = st.slider('x 끝값', 10.0, 20.0, 10.0)
 
