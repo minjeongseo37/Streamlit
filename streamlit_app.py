@@ -4,6 +4,25 @@ import numpy as np
 import matplotlib.pyplot as plt # 시각화 라이브러리
 import plotly.express as px
 
+
+
+
+import plotly.express as px
+data_canada = px.data.gapminder().query("country == 'Canada'")
+data_canada
+fig = px.bar(data_canada, x='year', y='pop')
+st.plotly_chart(fig)
+
+import plotly.graph_objects as go
+labels = ['A','B','C','D']
+values = [300,200,100,500]
+fig = go.Figure(data = [go.Pie(labels = labels, values = values, hole =.3)])
+st.plotly_chart(fig)
+
+
+
+
+
 st.title('Streamlit for sin and cos function visualization')
 
 x_start = st.slider('x 시작값' ,  0.0, 10.0, 0.0)
@@ -36,18 +55,5 @@ result = expensive_computataion(x)
 
 
 
-
-
-import plotly.express as px
-data_canada = px.data.gapminder().query("country == 'Canada'")
-data_canada
-fig = px.bar(data_canada, x='year', y='pop')
-st.plotly_chart(fig)
-
-import plotly.graph_objects as go
-labels = ['A','B','C','D']
-values = [300,200,100,500]
-fig = go.Figure(data = [go.Pie(labels = labels, values = values, hole =.3)])
-st.plotly_chart(fig)
 
 
