@@ -58,8 +58,15 @@ st.write("")
 st.write("")
 st.write("")
 
-
-st.subheader('2. Streamlit for sin and cos function visualization')
+st.markdown(
+    """
+    <div style="margin-left: 50px; margin-right: 0px;">
+        <h3>2. Streamlit for sin and cos function visualization</h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+#st.subheader('2. Streamlit for sin and cos function visualization')
 st.write("")
 st.write("")
 x_start = st.slider('x 시작값' ,  0.0, 10.0, 0.0)
@@ -89,3 +96,7 @@ def expensive_computataion(x):
     return np.sin(x) + np.cos(x)
 
 result = expensive_computataion(x)
+
+
+st.markdown("</div>", unsafe_allow_html=True)  # div 닫기
+
