@@ -32,7 +32,6 @@ data_canada = px.data.gapminder().query("country == 'Canada'")
 fig2 = px.bar(data_canada, x='year', y='pop', color='pop')
 fig2.update_layout(margin=dict(l=50, r=50, t=20, b=20))  # Bar chart margins
 
-
 # Create two columns with 3:1 ratio
 col1, col2 = st.columns([3, 1])
 
@@ -52,7 +51,6 @@ st.plotly_chart(fig3)
 
 st.write("")
 st.write("")
-st.write("")
 
 # Second section with custom margin
 st.markdown(
@@ -64,7 +62,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.write("")
 st.write("")
 
 # Sliders for sin and cos function visualization
@@ -93,5 +90,3 @@ def expensive_computation(x):
     return np.sin(x) + np.cos(x)
 
 result = expensive_computation(x)
-
-st.markdown("</div>", unsafe_allow_html=True)
