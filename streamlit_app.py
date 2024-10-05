@@ -30,6 +30,9 @@ with col2:
 
 df = px.data.gapminder()
 fig3 = px.scatter(df.query("year == 2007"), x = 'gdpPercap' , y = 'lifeExp', size = 'pop', color = 'continent')
+st.plotly_chart(fig3)
+
+
 
 
 st.title('Streamlit for sin and cos function visualization')
