@@ -19,13 +19,13 @@ fig = px.bar(data_canada, x='year', y='pop', color = 'pop')
 chart2 = st.plotly_chart(fig)
 
 
-# col1, col2 = st.columns(['chart1', 'chart2'])
+col1, col2 = st.columns(['chart1', 'chart2'])
 
-# with col1:
-#     st.image('cat.jpg', width=200)
+with col1:
+    st.plotly_chart(width=200)
    
-# with col2:
-#     st.image('dog.jpg', width=200)
+with col2:
+    st.image('dog.jpg', width=200)
 
 
 
