@@ -16,8 +16,8 @@ import plotly.express as px
 data_canada = px.data.gapminder().query("country == 'Canada'")
 fig2 = px.bar(data_canada, x='year', y='pop', color = 'pop')
 
-# Create two columns
-col1, col2 = st.columns(1, 2)  # col1은 col2의 절반 너비 열 생성
+# Create two columns with 1:2 ratio
+col1, col2 = st.columns([1, 2])  # col1은 col2의 절반 너비 열 생성
 
 # First column with pie chart
 with col1:
