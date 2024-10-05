@@ -25,10 +25,13 @@ st.markdown(
 labels = ['A', 'B', 'C', 'D']
 values = [300, 200, 100, 500]
 fig1 = go.Figure(data=[go.Pie(labels=labels, values=values, hole=0.3)])
+fig1.update_layout(margin=dict(l=50, r=50, t=20, b=20))  # Pie chart margins
 
 # Bar chart
 data_canada = px.data.gapminder().query("country == 'Canada'")
 fig2 = px.bar(data_canada, x='year', y='pop', color='pop')
+fig2.update_layout(margin=dict(l=50, r=50, t=20, b=20))  # Bar chart margins
+
 
 # Create two columns with 3:1 ratio
 col1, col2 = st.columns([3, 1])
@@ -44,6 +47,7 @@ with col2:
 # Scatter plot
 df = px.data.gapminder()
 fig3 = px.scatter(df.query("year == 2007"), x='gdpPercap', y='lifeExp', size='pop', color='continent')
+fig3.update_layout(margin=dict(l=50, r=50, t=20, b=20))  # Scatter plot margins
 st.plotly_chart(fig3)
 
 st.write("")
@@ -80,6 +84,7 @@ ax.legend(['sin', 'cos'])
 ax.set_xlabel('X-axis')
 ax.set_ylabel('Y-axis')
 ax.set_title('sin and cos function')
+ax.update_layout(margin=dict(l=50, r=50, t=20, b=20))  # Scatter plot margins
 
 st.pyplot(fig)
 
