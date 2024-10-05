@@ -33,7 +33,11 @@ fig3 = px.scatter(df.query("year == 2007"), x = 'gdpPercap' , y = 'lifeExp', siz
 st.plotly_chart(fig3)
 
 
-
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
 
 st.header('Streamlit for sin and cos function visualization')
 
