@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt # 시각화 라이브러리
 import plotly.express as px
 
 
+st.title('Visualization_241005')
 
 
 import plotly.express as px
