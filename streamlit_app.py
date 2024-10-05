@@ -11,7 +11,38 @@ def main_page():
 def page2():
     st.title('Page 2📒')
     st.sidebar.title('Side 2📒')
-    
+    st.header('1-2. Streamlit for sin and cos function visualization')
+
+x_start = st.slider('x 시작값' ,  0.0, 10.0, 0.0)
+x_end = st.slider('x 시작값' ,  10.0, 20.0, 10.0)
+
+
+x = np.linspace(x_start, x_end)
+
+y_sin = np.sin(x)
+y_cos = np.cos(x)
+
+
+fig , ax = plt.subplots()
+
+ax.plot(x, y_sin)
+ax.plot(x, y_cos)
+ax.legend(['sin', 'cos'])
+ax.set_xlabel('X-axis')
+ax.set_ylabel('Y-axis')
+
+ax.set_title('sin and cos fuction')
+
+st.pyplot(fig)
+
+@st.cache
+def expensive_computataion(x):
+    return np.sin(x) + np.cos(x)
+
+result = expensive_computataion(x)
+
+
+
 def page3():
     st.title('Page 3🎉')
     st.sidebar.title('Side 3🎉')
@@ -60,35 +91,6 @@ st.write("")
 st.write("")
 st.write("")
 
-st.header('1-2. Streamlit for sin and cos function visualization')
-
-x_start = st.slider('x 시작값' ,  0.0, 10.0, 0.0)
-x_end = st.slider('x 시작값' ,  10.0, 20.0, 10.0)
-
-
-x = np.linspace(x_start, x_end)
-
-y_sin = np.sin(x)
-y_cos = np.cos(x)
-
-
-fig , ax = plt.subplots()
-
-ax.plot(x, y_sin)
-ax.plot(x, y_cos)
-ax.legend(['sin', 'cos'])
-ax.set_xlabel('X-axis')
-ax.set_ylabel('Y-axis')
-
-ax.set_title('sin and cos fuction')
-
-st.pyplot(fig)
-
-@st.cache
-def expensive_computataion(x):
-    return np.sin(x) + np.cos(x)
-
-result = expensive_computataion(x)
 
 
 
