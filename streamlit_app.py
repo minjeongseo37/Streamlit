@@ -7,7 +7,7 @@ import plotly.express as px
 
 st.title('[ Visualization_241005 ]')
 
-st.header('1. Streamlit for diverse forms of graph visualizations')
+st.subheader('1. Streamlit for diverse forms of graph visualizations')
 
 import plotly.graph_objects as go
 labels = ['A','B','C','D']
@@ -47,7 +47,7 @@ st.write("")
 
 
 
-st.header('2. Streamlit for sin and cos function visualization')
+st.subheader('2. Streamlit for sin and cos function visualization')
 
 x_start = st.slider('x 시작값' ,  0.0, 10.0, 0.0)
 x_end = st.slider('x 시작값' ,  10.0, 20.0, 10.0)
