@@ -84,8 +84,7 @@ ax.legend(['sin', 'cos'])
 ax.set_xlabel('X-axis')
 ax.set_ylabel('Y-axis')
 ax.set_title('sin and cos function')
-ax.update_layout(margin=dict(l=50, r=50, t=20, b=20))  # Scatter plot margins
-
+plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)  # Adjust margins
 st.pyplot(fig)
 
 # Expensive computation with caching
