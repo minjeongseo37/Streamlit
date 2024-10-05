@@ -67,7 +67,7 @@ st.write("")
 # Wrap sliders in a div for margin
 st.markdown(
     """
-    <div style="margin-left: 50px; margin-right: 50px;">
+    <div style="margin: 20px 50px;">  <!-- 여백 추가 -->
     """,
     unsafe_allow_html=True
 )
@@ -103,7 +103,7 @@ plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)  # Adjust margins
 # Wrap plot in a div for margin
 st.markdown(
     """
-    <div style="margin-left: 50px; margin-right: 50px;">
+    <div style="margin: 20px 50px;">  <!-- 여백 추가 -->
     """,
     unsafe_allow_html=True
 )
