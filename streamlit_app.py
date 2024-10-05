@@ -47,5 +47,5 @@ st.plotly_chart(fig)
 labels = ['A','B','C','D']
 values = [300,200,100,500]
 fig = go.Figure(data = [go.Pie(labels = labels, values = values, hole =.3)])
-st.plotly_chart(fig)
+st.plotly_pie(fig)
 
