@@ -42,4 +42,52 @@ with col2:
     st.plotly_chart(fig1, use_container_width=True)
 
 # Scatter plot
-df = px
+df = px.data.gapminder()
+fig3 = px.scatter(df.query("year == 2007"), x='gdpPercap', y='lifeExp', size='pop', color='continent')
+st.plotly_chart(fig3)
+
+st.write("")
+st.write("")
+st.write("")
+
+# Second section with custom margin
+st.markdown(
+    """
+    <div style="margin-left: 50px; margin-right: 0px;">
+        <h3>2. Streamlit for sin and cos function visualization</h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.write("")
+st.write("")
+
+# Sliders for sin and cos function visualization
+x_start = st.slider('x 시작값', 0.0, 10.0, 0.0)
+x_end = st.slider('x 끝값', 10.0, 20.0, 10.0)
+
+x = np.linspace(x_start, x_end)
+
+y_sin = np.sin(x)
+y_cos = np.cos(x)
+
+# Plot sin and cos functions using Matplotlib
+fig, ax = plt.subplots()
+ax.plot(x, y_sin)
+ax.plot(x, y_cos)
+ax.legend(['sin', 'cos'])
+ax.set_xlabel('X-axis')
+ax.set_ylabel('Y-axis')
+ax.set_title('sin and cos function')
+
+st.pyplot(fig)
+
+# Expensive computation with caching
+@st.cache
+def expensive_computation(x):
+    return np.sin(x) + np.cos(x)
+
+result = expensive_computation(x)
+
+st.markdown("</div>", unsafe_allow_html=True)
