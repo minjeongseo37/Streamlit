@@ -10,6 +10,15 @@ st.title('■ Visualization_241005 ■')
 st.write("")
 st.write("")
 
+st.markdown(
+    """
+    <div style="padding-left: 50px; padding-right: 50px;">
+        This text has 50px of padding on both sides.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 st.subheader('1. Streamlit for diverse forms of graph visualizations')
 
 import plotly.graph_objects as go
