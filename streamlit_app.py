@@ -35,7 +35,7 @@ st.plotly_chart(fig3)
 
 
 
-st.text('Streamlit for sin and cos function visualization')
+st.header('Streamlit for sin and cos function visualization')
 
 x_start = st.slider('x 시작값' ,  0.0, 10.0, 0.0)
 x_end = st.slider('x 시작값' ,  10.0, 20.0, 10.0)
